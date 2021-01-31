@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Char Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+<!--
+    Karakter Genetiği
+-->
+    <div id="characterselectFamily">
+        <h2>Set Genetic</h2>
+        <h4>Father</h4>
+        <div class="selector">
+                <div id="fatherLeft" class="selectorLeft">
+                    <p><</p>
+                </div>
+                <input type="text" value="mark" id="father" datad-id="0" disabled>
+                <div id="fatherRight" class="selectorRight">
+                    <p>></p>
+                </div>
+            </div>
+        <h4>Mother</h4>
+        <div class="selector">
+            <div id="motherLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="Linda" id="mother" datad-id="0" disabled>
+            <div id="motherRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <h4>Resemblance</h4>
+        <div class="selector" id="range">
+            <div id="resamblanceLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="range" value="0.0" min="0.0" max="1.0" id="resamblance" datad-id="0" step="0.1">
+            <div id="resamblanceRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <h4>Skintone</h4>
+        <div class="selector">
+            <div id="skintoneLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="number" value="0" id="skintone" datad-id="0" disabled>
+            <div id="skintoneRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+
+        <button id="OnePageNext" class="nextpage">İleri</button>
+    </div>
+<!--
+    Karakter Yüz Görünümü
+-->
+<div id="charcreatorBody">
+    <h2>Set Face Skin</h2>
+    <h4>Brow</h4>
+    <div  class="selector">
+            <div id="BrowLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="Brow" datad-id="0" style="padding-bottom: 10px;" disabled>
+            <div id="BrowRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <h4>Brow Color</h4>
+        <div  class="selector">
+                <div id="BrowColorOneLeft" class="selectorLeft">
+                    <p><</p>
+                </div>
+                <input type="text" value="0" id="BrowColorOne" datad-id="0" style="padding-bottom: 10px;" disabled>
+                <div id="BrowColorOneRight" class="selectorRight">
+                    <p>></p>
+                </div>
+            </div>
+            <!-- <h4>Brow Color 2</h4>
+            <div  class="selector">
+                    <div id="BrowColorTwoLeft" class="selectorLeft">
+                        <p><</p>
+                    </div>
+                    <input type="text" value="0" id="BrowColorTwo" datad-id="0" style="padding-bottom: 10px;" disabled>
+                    <div id="BrowColorTwoRight" class="selectorRight">
+                        <p>></p>
+                    </div>
+                </div> -->
+        <h4>Eyes</h4>
+        <div  class="selector" >
+            <div id="EyesLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="Eyes" datad-id="0" disabled>
+            <div id="EyesRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <h4>Nose Width</h4>
+        <div  class="selector" id="range">
+            <div id="NoseLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0.0" id="Nose" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="NoseRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>Nose Peak Hight</h4>
+        <div  class="selector" id="range">
+            <div id="NoseProfileLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="NoseProfile" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="NoseProfileRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+    
+        <h4>Nose Peak Lenght</h4>
+        <div  class="selector" id="range">
+                <div id="NoseTipLeft" class="selectorLeft">
+                    <p>-1.0</p>
+                </div>
+                <input type="range" value="0.0" id="NoseTip" datad-id="0"  min="-1.0" max="1.0" step="0.1" >
+                <div id="NoseTipRight" class="selectorRight">
+                    <p>1.0</p>
+                </div>
+            </div>
+            <h4>Nose Bone High</h4>
+            <div  class="selector" id="range">
+                    <div id="NoseBoneHighLeft" class="selectorLeft">
+                        <p>-1.0</p>
+                    </div>
+                    <input type="range" value="0.0" id="NoseBoneHigh" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+                    <div id="NoseBoneHighRight" class="selectorRight">
+                        <p>1.0</p>
+                    </div>
+                </div>
+            <h4>Nose Peak Lowering</h4>
+            <div  class="selector" id="range">
+                <div id="NosePeakLoweringLeft" class="selectorLeft">
+                    <p>-1.0</p>
+                </div>
+                <input type="range" value="0" id="NosePeakLowering" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+                <div id="NosePeakLoweringRight" class="selectorRight">
+                    <p>1.0</p>
+                </div>
+            </div>
+            <h4>Nose Bone Twist</h4>
+            <div  class="selector" id="range">
+                <div id="NoseBoneTwistLeft" class="selectorLeft">
+                    <p>-1.0</p>
+                </div>
+                <input type="range" value="0" id="NoseBoneTwist" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+                <div id="NoseBoneTwistRight" class="selectorRight">
+                    <p>1.0</p>
+                </div>
+            </div>
+        <h4>CheekBones</h4>
+        <div  class="selector" id="range">
+            <div id="CheekBonesLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="CheekBones" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="CheekBonesRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>CheekBones Width</h4>
+        <div  class="selector" id="range">
+            <div id="CheeksLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="Cheeks" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="CheeksRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>Cheeks Width</h4>
+        <div  class="selector" id="range">
+            <div id="CheeksWidthLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0.0" id="CheeksWidth" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="CheeksWidthRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>Lips</h4>
+        <div  class="selector" id="range">
+            <div id="LipsLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="Lips" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="LipsRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+
+        <h4>Jaw</h4>
+        <div  class="selector" id="range">
+            <div id="JawLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="Jaw" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="JawRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>Jaw Back Lenght</h4>
+        <div  class="selector" id="range">
+            <div id="JawBackLenghLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="JawBackLengh" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="JawBackLenghRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>Chin Profile</h4>
+        <div  class="selector" id="range">
+            <div id="ChinProfileLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="ChinProfile" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="ChinProfileRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>Chin Shape</h4>
+        <div  class="selector" id="range">
+            <div id="ChinShapeLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="ChinShape" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="ChinShapeRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>Chimp Bone Width</h4>
+        <div  class="selector" id="range">
+            <div id="ChimpBoneWidthLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="ChimpBoneWidth" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="ChimpBoneWidthRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <h4>ChimpHole</h4>
+        <div  class="selector" id="range">
+            <div id="ChimpHoleLeft" class="selectorLeft">
+                <p>-1.0</p>
+            </div>
+            <input type="range" value="0" id="ChimpHole" datad-id="0" min="-1.0" max="1.0" step="0.1" >
+            <div id="ChimpHoleRight" class="selectorRight">
+                <p>1.0</p>
+            </div>
+        </div>
+        <button id="TwoPageNext" class="nextpage">İleri</button>
+        <button id="TwoLastPAge" class="lastpage">Geri</button>
+        </div>
+   
+    </div>
+<!---
+
+Karakter Görünümü
+
+--->
+    <div id="appearance">
+        <h2>Set Appearance</h2>
+        <h4>Hair</h4>
+        <div  class="selector" id="range">
+            <div id="HairLeft" class="selectorLeft">
+                <p>0</p>
+            </div>
+            <input type="range" value="0" id="Hair"  datad-id="0" min="0" max="72" step="1" >
+            <div id="HairRight" class="selectorRight">
+                <p>72</p>
+            </div>
+        </div>
+        <h4>Hair Color 1</h4>
+        <div  class="selector">
+            <div id="HairColorOneLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="HairColorOne" datad-id="0" disabled>
+            <div id="HairColorOneRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <h4>Hair Color 2</h4>
+        <div  class="selector">
+            <div id="HairColorTwoLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="HairColorTwo" datad-id="0" disabled>
+            <div id="HairColorTwoRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <!-- <h4>Skin Blemishes</h4>
+        <div  class="selector">
+            <div id="SkinBlemishesLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="SkinBlemishes" datad-id="0" disabled>
+            <div id="SkinBlemishesRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div> -->
+        <!-- <h4>Skin Aging</h4>
+        <div  class="selector">
+            <div id="SkinAgingLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="SkinAging" datad-id="0" disabled>
+            <div id="SkinAgingRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <h4>Skin Complexion</h4>
+        <div  class="selector">
+            <div id="SkinComplexionLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="SkinComplexion" datad-id="0" disabled>
+            <div id="SkinComplexionRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div> -->
+        <h4>Moles & freckles</h4> <!-- MF-->
+        <div  class="selector" id="range">
+            <div id="MFLeft" class="selectorLeft">
+                <p>-1</p>
+            </div>
+            <input type="range" value="0" id="MF" datad-id="0"  datad-id="0" min="-1" max="17" step="1" >
+            <div id="MFRight" class="selectorRight">
+                <p>17</p>
+            </div>
+        </div>
+        <h4>Eye MakeUp</h4>
+        <div  class="selector" id="range">
+            <div id="EyeMakeUpLeft" class="selectorLeft">
+                <p>-1</p>
+            </div>
+            <input type="range" value="0" id="EyeMakeUp" datad-id="0"  min="-1" max="74" step="1" >
+            <div id="EyeMakeUpRight" class="selectorRight">
+                <p>74</p>
+            </div>
+        </div>
+        <h4>Eye MakeUp Color</h4>
+        <div  class="selector" id="range">
+            <div id="EyeMakeUpColorLeft" class="selectorLeft">
+                <p>-1</p>
+            </div>
+            <input type="range" value="0" id="EyeMakeUpColor" datad-id="0"  min="-1" max="74" step="1" >
+            <div id="EyeMakeUpColorRight" class="selectorRight">
+                <p>74</p>
+            </div>
+        </div>
+        <h4>Blusher</h4>
+        <div  class="selector" id="range">
+            <div id="BlusherLeft" class="selectorLeft">
+                <p>-1</p>
+            </div>
+            <input type="range" value="-1" id="Blusher" datad-id="0"  min="-1" max="6" step="1">
+            <div id="BlusherRight" class="selectorRight">
+                <p>6</p>
+            </div>
+        </div>
+        <h4>Blusher Color</h4>
+        <div  class="selector" id="range">
+            <div id="BlusherColorLeft" class="selectorLeft">
+                <p>-1</p>
+            </div>
+            <input type="range" value="-1" id="BlusherColor" datad-id="0"  min="-1" max="63" step="1">
+            <div id="BlusherColorRight" class="selectorRight">
+                <p>63</p>
+            </div>
+        </div>
+        <h4>LiphStick</h4>
+        <div  class="selector" id="range">
+            <div id="LiphStickLeft" class="selectorLeft">
+                <p>-1</p>
+            </div>
+            <input type="range" value="-1" id="LiphStick" datad-id="0"  min="-1" max="9" step="1">
+            <div id="LiphStickRight" class="selectorRight">
+                <p>9</p>
+            </div>
+        </div>
+        <h4>LiphStick Color</h4>
+        <div  class="selector" id="range">
+            <div id="LiphStickColorLeft" class="selectorLeft">
+                <p>-1</p>
+            </div>
+            <input type="range" value="-1" id="LiphStickColor" datad-id="0"  min="-1" max="63" step="1">
+            <div id="LiphStickColorRight" class="selectorRight">
+                <p>63</p>
+            </div>
+        </div>
+        <button id="ThreePageNext" class="nextpage">İleri</button>
+        <button id="ThreeLastPage" class="lastpage">Geri</button>
+    </div>
+<!---
+
+Karakter Giyimi
+
+--->
+    <div id="apparel">
+        <h2>Apparel</h2>
+        <h4>Arms</h4>
+        <div  class="selector">
+            <div id="ArmsLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="Arms" datad-id="0">
+            <div id="ArmsRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <h4>Pants</h4>
+        <div  class="selector">
+            <div id="PantsLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="Pants" datad-id="0" disabled>
+            <div id="PantsRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <!-- <h4>Pants Color</h4>
+        <div  class="selector">
+            <div id="PantsColorLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="PantsColor" datad-id="0" disabled>
+            <div id="PantsColorRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div> -->
+        <h4>Shoes</h4>
+        <div  class="selector">
+            <div id="ShoesLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="Shoes" datad-id="0" disabled>
+            <div id="ShoesRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <!-- <h4>Shoes Color</h4>
+        <div  class="selector">
+            <div id="ShoesColorLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="ShoesColor" datad-id="0" disabled>
+            <div id="ShoesColorRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div> -->
+        <h4>T-Shirt</h4>
+        <div  class="selector">
+            <div id="TShirtLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="TShirt" datad-id="0" disabled>
+            <div id="TShirtRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+        <!-- <h4>T-Shirt Color</h4>
+        <div  class="selector">
+            <div id="TShirtColorLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="TShirtColor" datad-id="0" disabled>
+            <div id="TShirtColorRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div> -->
+        <h4>Torso</h4>
+        <div  class="selector">
+            <div id="TorsoLeft" class="selectorLeft">
+                <p><</p>
+            </div>
+            <input type="text" value="0" id="Torso" datad-id="0" disabled>
+            <div id="TorsoRight" class="selectorRight">
+                <p>></p>
+            </div>
+        </div>
+
+        <button id="Finish" class="nextpage">Karakteri Kaydet</button>
+        <button id="fourLastPage" class="lastpage">Geri</button>
+    </div>
+    <script src="app.js"></script>
+    <script src="overlaysOpacity.js"></script>
+</body>
+</html>

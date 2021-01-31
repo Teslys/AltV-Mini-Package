@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+body {
+  background: url('login.png'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: 100%; */
+}
+
+.login {
+  border:1px solid rgba(0, 0, 0, 0.034);
+  width: 510px;
+  height: 350px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 15% auto;
+  box-sizing: border-box;
+  font-size: 25px;
+  background-color: rgba(48, 43, 43, 0.521);
+  font-family: 'Secular One', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.login h3 {
+  color:whitesmoke;
+}
+.login input[type="text"] {
+  width: 68%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+   padding: 11px;
+   border-radius: 3px;
+   border: 0px solid rgba(148, 146, 146, 0);
+   border-left:6px solid rgba(185, 6, 6, 0.877);
+   background-color: rgba(255, 255, 255, 0.637);
+}
+.login input[type="text"]:active {
+     border-left:6px solid rgba(48, 185, 6, 0.877);
+
+}
+.login input[type="text"]:focus {
+     border-left:6px solid rgba(48, 185, 6, 0.877);
+
+}
+.login input[type="password"] {
+  width: 68%;
+    margin-bottom: 3%;
+    padding: 11px;
+    border-radius: 5px;
+    border: 0px solid rgb(148, 146, 146);
+    border-left:6px solid rgba(185, 6, 6, 0.877);
+   background-color: rgba(255, 255, 255, 0.637);
+
+}
+.login input[type="password"]:active {
+     border-left:6px solid rgba(48, 185, 6, 0.877);
+
+}
+.login input[type="password"]:focus {
+     border-left:6px solid rgba(48, 185, 6, 0.877);
+
+}
+.login input[type="button"] {
+  border: 1px solid rgba(221, 221, 221, 0.137);
+  width: 29%;
+  height: 5vh;
+  position: absolute;
+  right: 12%;
+  margin-top: 5%;
+  border-radius: 5px;
+  background-color: rgba(79, 80, 79, 0.534);
+  color:white;
+  cursor: pointer;
+  font-family: 'Secular One', sans-serif;
+  
+}
+.login input[type="button"]:hover {
+  background-color: rgba(44, 44, 44, 0.644);
+  color:whitesmoke;
+}
+
+

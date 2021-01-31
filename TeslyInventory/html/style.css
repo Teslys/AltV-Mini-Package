@@ -1,0 +1,396 @@
+::selection {
+    background-color: rgba(255, 0, 0, 0.342);
+    pointer-events: none;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(85, 85, 85, 0.356);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+body {
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+          overflow: hidden;
+}
+.backgroundblur {
+    background: rgba(146, 143, 143, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    filter: blur(25px);
+}
+.inventorybody {
+    width: 95%;
+    height: 85vh;
+    border:1px solid rgba(31, 30, 30, 0.158);
+    margin: 3% auto;
+    position: relative;
+    border-radius: 10px;
+    filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0.685);
+    box-sizing: border-box;
+}
+.bodyCharacter {
+    float: left;
+    width: 39.5%;
+    border-right:1px solid rgba(221, 221, 221, 0.089);
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x:hidden;
+    position: relative;
+    
+}
+.bodyCharacter .itemslot {
+    width: 22%;
+    height: 25%;
+    border: 1px solid #2e2d2d73;
+    background-color: rgba(27, 26, 26, 0.445);    
+    margin: 5px;
+    border-radius: 10px;
+}
+.infos {
+    float: left;
+    width: 20.5%;
+    height: 100%;
+    position: relative;
+}
+.infos #countitem {
+    width: 65%;
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-left: 15%;
+    color: whitesmoke;
+    border: 1px solid transparent;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom:15px;
+    position: absolute;
+    top: 25%;
+    border-radius: 2px;
+}
+.infos #use {
+    width: 68%;
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-left: 15%;
+    color: whitesmoke;
+    border: 1px solid transparent;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    position: absolute;
+    top: 35%;
+    border-radius: 2px;
+    outline: none !important;
+    padding: 15px;
+
+}
+.infos #use:hover {
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.infos #give {
+    width: 68%;
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-left: 15%;
+    color: whitesmoke;
+    border: 1px solid transparent;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    position: absolute;
+    top: 42.5%;
+    border-radius: 2px;
+    outline: none !important;
+    padding: 15px;
+}
+.infos #give:hover {
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.infos #drop {
+    width: 68%;
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-left: 15%;
+    color: whitesmoke;
+    border: 1px solid transparent;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    position: absolute;
+    top: 50%;
+    border-radius: 2px;
+    outline: none !important;
+    padding: 15px;
+
+}
+.infos #drop:hover {
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.infos input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;  
+}
+.infos #countitem:hover {
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.infos #countitem:focus {
+    outline: none !important;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.infos #infobox {
+    width: 68%;
+    /* height: 15%; */
+    background-color: rgba(0, 0, 0, 0.466);
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-left: 15%;
+    margin-top: 25%;
+}
+.infos #infobox #weight {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.466);
+
+}
+.infos #infobox #iteminfo {
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 5px;
+    margin-top: 2%;
+    text-align: center;
+}
+.bodydrop {
+    position: relative;
+    float: left;
+    width: 39.5%;
+    border-left:1px solid rgba(221, 221, 221, 0.089);
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x:hidden;
+    /* display: none; */
+
+}
+.bodydrop .itemslot {
+    width: 22%;
+    height: 25%;
+    border: 1px solid #2e2d2d73;
+    background-color: rgba(27, 26, 26, 0.445);
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+.bodycase {
+    position: relative;
+    float: left;
+    width: 39.5%;
+    border-left:1px solid rgba(221, 221, 221, 0.089);
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x:hidden;
+    display: none;
+}
+.bodycase .itemslot {
+    width: 22%;
+    height: 45%;
+    border: 1px solid #2e2d2d73;
+    background-color: rgba(83, 24, 24, 0.445);
+    margin: 5px;
+    border-radius: 10px;
+}
+.itemslot {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    /* z-index: 123451635; */
+}
+.itemslot .icon {
+    /* background-image: url('https://cdn0.iconfinder.com/data/icons/bakery-filled-color/300/91516644Untitled-3-512.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 15vh;
+    margin-left: 10%;
+    display: block;
+    margin-top: 25%;
+    /* margin-bottom:2%; */
+    /* z-index: -5; */
+    pointer-events: none;
+}
+.itemslot .name {
+    width: 100%;
+    text-align: center;  
+    color: whitesmoke;
+    margin-top: -25px;
+    display: block;
+    /* z-index: -5; */
+    pointer-events: none;
+
+}
+.itemslot .status {
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(221, 221, 221, 0.007);
+    height: 10%;
+    border-radius: 10px;
+    margin-top: 1%;  
+    display: block;
+    /* z-index: -5; */
+    pointer-events: none;
+
+}
+.itemslot .status .statusRed {
+    background-color: rgba(255, 0, 0, 0.37);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+.itemslot .status .statusRed::selection {
+    background-color: transparent;
+}
+.itemslot .status .statusYellow {
+    background-color: rgba(255, 238, 0, 0.568);
+    color: white;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+.itemslot .status .statusYellow::selection {
+    background-color: transparent;
+}
+.itemslot .status .statusGreen {
+    background-color: rgba(0, 255, 21, 0.568);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+.itemslot .status .statusGreen::selection {
+    background-color: transparent;
+}
+.itemslot:hover {
+    background-color: rgba(27, 26, 26, 0.671);
+
+}
+.itemslot .name::selection {
+    background-color: transparent;
+}
+.itemslot #itemKG {
+    right: 10px;
+    top:10px;
+    color: whitesmoke;
+    position: absolute;
+    font-size: 11px;
+}
+#hidemoveElement {
+    width: 8.5%;
+    height: 25%;
+    border: 1px solid #2e2d2d73;
+    background-color: rgba(27, 26, 26, 0.445);
+    margin: 5px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 541542;
+    display: none;
+    pointer-events: none;
+    overflow:hidden;
+
+}
+#hidemoveElement .icon {
+    /* background-image: url('https://cdn0.iconfinder.com/data/icons/bakery-filled-color/300/91516644Untitled-3-512.png'); */
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 15vh;
+    margin-left: 10%;
+    margin-top:25%;
+    display: block;
+    /* z-index: -5; */
+    pointer-events: none;
+
+
+}
+#hidemoveElement .name {
+    width: 100%;
+    text-align: center;  
+    color: whitesmoke;
+    margin-top: -25px;
+    display: block;
+    pointer-events: none;
+}
+#hidemoveElement .status {
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(221, 221, 221, 0.007);
+    height: 10%;
+    border-radius: 10px;
+    margin-top: 5%;  
+    display: block;
+    /* z-index: -5; */
+    pointer-events: none;
+}
+#hidemoveElement .status .statusRed {
+    background-color: rgba(255, 0, 0, 0.37);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+#hidemoveElement .status .statusRed::selection {
+    background-color: transparent;
+}
+#hidemoveElement .status .statusYellow {
+    background-color: rgba(255, 238, 0, 0.568);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+#hidemoveElement .status .statusYellow::selection {
+    background-color: transparent;
+}
+#hidemoveElement .status .statusGreen {
+    background-color: rgba(0, 255, 21, 0.568);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+#hidemoveElement .status .statusGreen::selection {
+    background-color: transparent;
+}
+#hidemoveElement:hover {
+    background-color: rgba(27, 26, 26, 0.671);
+
+}
+#hidemoveElement .name::selection {
+    background-color: transparent;
+}
+#hidemoveElement #itemKG {
+    right: 10px;
+    top:10px;
+    color: whitesmoke;
+    position: absolute;
+    font-size: 11px;
+    background-color: #20202010;
+}

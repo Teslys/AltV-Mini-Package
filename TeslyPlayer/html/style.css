@@ -1,0 +1,150 @@
+
+.hud {
+    width: 14.8%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 12px;
+    left: 26px;
+  }
+  #health {
+    height: 18px;
+    float: left;
+    width: 45%;
+    border: 1px solid #dddddd;
+    background-color: rgba(245, 239, 239, 0.808);
+    position: relative;
+
+  }
+  #health > span {
+    text-indent: 1px;
+    display: block;
+    height: 100%;
+    color: white;
+    background-color: rgb(35, 131, 61);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43,194,83) 37%,
+      rgb(84,240,84) 69%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+  
+    #armour {
+    border: 1px solid #dddddd;
+    width: 50%;
+    float: left;
+    height: 18px;
+    position: relative;
+    background-color: rgba(245, 239, 239, 0.808);
+  }
+  #armour > span {
+    color: whitesmoke;
+      display: block;
+    height: 100%;
+    background-color: rgb(17, 52, 209);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 78, 194) 37%,
+      rgb(19, 15, 221) 69%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+  #food {
+    border: 1px solid #dddddd;
+    width: 25%;
+    float: left;
+    height: 18px;
+    position: relative;
+    background-color: rgba(245, 239, 239, 0.808);
+  }
+  #food > span {
+    color: whitesmoke;
+      display: block;
+    height: 100%;
+    background-color: rgb(209, 126, 17);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(194, 116, 43) 37%,
+      rgb(19, 15, 221) 69%
+    );
+    position: relative;
+    overflow: hidden;
+    text-indent: 1px;
+  }
+  #food > span > i {
+    padding-top: 1.2px;
+  }
+  #drink {
+    border: 1px solid #dddddd;
+    width: 25%;
+    float: left;
+    height: 18px;
+    position: relative;
+    background-color: rgba(245, 239, 239, 0.808);
+  }
+  #drink > span {
+    color: whitesmoke;
+      display: block;
+    height: 100%;
+    background-color: rgb(28, 129, 124);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(194, 116, 43) 37%,
+      rgb(19, 15, 221) 69%
+    );
+    position: relative;
+    overflow: hidden;
+    text-indent: 1px;
+  }
+  #drink > span > i {
+    padding-top: 1.2px;
+  }
+  #stamina {
+    border: 1px solid #dddddd;
+    width: 22%;
+    float: left;
+    height: 18px;
+    position: relative;
+    background-color: rgba(245, 239, 239, 0.808);
+  }
+  #stamina > span {
+    color: whitesmoke;
+      display: block;
+    height: 100%;
+    background-color: rgb(117, 5, 20);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(194, 116, 43) 37%,
+      rgb(19, 15, 221) 69%
+    );
+    position: relative;
+    overflow: hidden;
+    text-indent: 1px;
+  }
+  #stamina > span > i {
+    padding-top: 1.2px;
+  }
+  #dive {
+    border: 1px solid #dddddd;
+    width: 21.7%;
+    float: left;
+    height: 18px;
+    position: relative;
+    background-color: rgba(245, 239, 239, 0.808);
+  }
+  #dive > span {
+    /* color: whitesmoke; */
+      display: block;
+    height: 100%;
+    background-color: rgb(153, 206, 201);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(194, 116, 43) 37%,
+      rgb(19, 15, 221) 69%
+    );
+    /* text-indent: .5px; */
+    position: relative;
+    overflow: hidden;
+  }

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+::selection {
+    background-color: transparent;
+}
+
+body {
+    background-color: dimgrey;
+}
+
+.t-telephone {
+    background-image: url('./img/cerceve2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 517px;
+    position: absolute;
+    right: 8%;
+    bottom: 2.5%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 33px;
+
+}
+.t-telephone .security-screen {
+    width: 241px;
+    height: 508px;
+    z-index: -1;
+    margin-left: 6.5px;
+    margin-top: 8.9px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.t-telephone .security-screen .security-background{
+    background-image: url('./img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 238px;
+    height: 508px;
+    filter: blur(1px);
+}
+.t-telephone .open-screen {
+    width: 60%;
+    height: 7px;
+    background-color: rgba(211, 203, 203, 0.13);
+    z-index: 1 !important;
+    position: absolute;
+    bottom: 25px;
+    left: 20%;
+    border-radius: 3px;
+}
+.t-telephone .upperbar {
+    width: 70%;
+    height: 2vh;
+    position: absolute;
+    top: 9px;
+    left: 16px;
+    box-sizing: border-box;
+}
+#signal {
+    color: whitesmoke;
+    font-size: 10px;
+    position: absolute;
+    right: 25px;
+    top:8px;
+}
+#battery {
+    color: whitesmoke;
+    font-size: 10px;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 10px;
+    top:8px;
+}
+#time {
+    color: whitesmoke;
+    font-size: 12px; 
+    position: absolute;
+    top: 4px;
+    font-family: 'Arvo', serif;
+}
+.home-page {
+    width: 240px;
+    height: 508px;
+    z-index: -1;
+    margin-left: 7px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+.t-telephone .home-page .background {
+    background-image: url('./img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 238px;
+    height: 508px;
+    filter: blur(1px);
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+body {
+  /* background-color: rgb(145, 145, 145); */
+  display: none;
+}
+.spawner {
+  background-color: rgba(41, 38, 38, 0.61);
+
+  width:350px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.spawner div {
+  color: rgba(255, 255, 255, 0.767);
+  border: 1px solid rgb(43, 41, 41);
+  width: 100%;
+  background-color: rgba(14, 13, 13, 0.699);
+  padding-top: 12px;
+  padding-bottom: 15px;
+  text-align: center;
+  margin-bottom: 2px;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor:pointer;
+}
+.spawner div input {
+  display: none;
+}
+.spawner div::selection {
+  background-color: transparent;
+}
+.spawner div:hover {
+    background-color: rgba(14, 13, 13, 0.575);
+   
+}
+#baslik  {
+    color: rgb(255, 255, 255);
+    background-color: rgba(48, 46, 46, 0.637);
+    margin-bottom: 10px;
+    font-family: 'Fredoka One', cursive;
+}

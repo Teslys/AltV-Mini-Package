@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tesly Inventory</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body id="body" >
+    <div class="backgroundblur"></div>
+    <div class="inventorybody" id="inventorybody" @mouseup="mouseup($event,null)">
+        <div id="hidemoveElement">
+            
+        </div>
+        <div class="bodyCharacter"  id="bodyCharacter" >
+            <div class="itemslot" v-for="item in 20" :id="'char'+item" @mousedown="mousedown($event,item)" @mouseup="mouseup($event,item)" >
+                    <div id="itemKG" v-for="itemdatas in itemdata" v-if="item == itemdatas.slot" v-text="itemdatas.itemKG"></div>
+                    <div class="icon"  disabled="disabled" v-for="itemdatas in itemdata" v-if="item == itemdatas.slot"  v-bind:style="{
+                        'background':'url(' + itemdatas.itemIcon + ')',
+                        'background-size': 'contain',
+                        'background-repeat': 'no-repeat'
+                    }"></div>
+                    <div class="name" disabled="disabled" v-for="itemdatas in itemdata" v-if="item == itemdatas.slot" v-text="itemdatas.itemName"></div>
+                    <div class="status" disabled="disabled">
+                    <div  v-for="itemdatas in itemdata" v-if="item == itemdatas.slot && inventoryStart == true && typeof itemdatas.itemStatus != 'string'" :class="itemdatas.itemStatusClass"  :style="{width:itemdatas.itemStatus + '%'}" v-text="itemdatas.itemStatus+ ' %'"></div>
+                    <div  v-for="itemdatas in itemdata" v-if="item == itemdatas.slot && inventoryStart == true && typeof itemdatas.itemStatus == 'string'" :class="itemdatas.itemStatusClass"  :style="{'width':'100%'}" v-text="itemdatas.itemStatus"></div>
+
+                </div>
+            </div>
+
+            <!-- </div> -->
+        </div>
+        <div class="infos">
+            <div id="infobox">
+                <div id="weight" > {{KG}} </div>
+            </div>
+            <input type="number" id="countitem" value="0">
+            <button id="use" @mouseup="mouseup($event,'use')">Kullan</button>
+            <button id="give" @mouseup="mouseup($event,'give')">Ver</button>
+            <!-- <button id="drop" @mouseup="mouseup($event,'drop')">Bırak</button> -->
+        </div>
+        <div class="bodydrop" v-if="inventoryStart == true" id="bodyDrop">
+            <div class="itemslot" v-for="drop in 20" :id="'drop'+drop" @mousedown="mousedown($event,'drop'+drop)" @mouseup="mouseup($event,'drop'+drop)">
+                <div id="itemKG" v-for="itemdatas in itemDropData" v-if="drop == itemdatas.slot" v-text="itemdatas.itemKG"></div>
+                <div class="icon"  disabled="disabled" v-for="itemdatas in itemDropData" v-if="drop == itemdatas.slot"  v-bind:style="{
+                    'background':'url(' + itemdatas.itemIcon + ')',
+                    'background-size': 'contain',
+                    'background-repeat': 'no-repeat'
+                }"></div>
+                <div class="name" disabled="disabled" v-for="itemdatas in itemDropData" v-if="drop == itemdatas.slot" v-text="itemdatas.itemName"></div>
+                <div class="status" disabled="disabled">
+                    <div  v-for="itemdatas in itemDropData" v-if="drop == itemdatas.slot && inventoryStart == true && typeof itemdatas.itemStatus != 'string'" :class="itemdatas.itemStatusClass"  :style="{width:itemdatas.itemStatus + '%'}" v-text="itemdatas.itemStatus+ ' %'"></div>
+                    <div  v-for="itemdatas in itemDropData" v-if="drop == itemdatas.slot && inventoryStart == true && typeof itemdatas.itemStatus == 'string'" :class="itemdatas.itemStatusClass"  :style="{'width':'100%'}" v-text="itemdatas.itemStatus"></div>
+
+                <!-- <div class="statusGreen" v-for="itemdatas in itemDropData" v-if="drop === itemdatas.slot"  :style="{width:itemdatas.itemStatus}" v-text="itemdatas.itemStatus+ ' %'"></div> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="bodycase" id="bodyCase">
+        </div>
+    </div>
+    <script>
+  
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
